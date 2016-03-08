@@ -1,4 +1,42 @@
-Bolt
+![](screenshot.png?raw=true "Bolt CMS")
+
+## Run it
+
+`docker run -it -d --name mybolt -p 8080:80 aerth/boltcms:latest`
+
+####################
+
+Or you may want to customize and tag your own image.
+
+## Build
+
+`docker build -t username/mybolt .`
+
+## Serve
+
+`docker run -it -d --name hello -p 8080:80 username/mybolt:latest`
+
+## Hack
+
+`$ docker exec -it mybolt bash`
+`bash-4.3# apk update && apk add nano vim`
+`exit`
+
+## Save Changes
+
+`$ docker commit hello username/mybolt:latest`
+
+## Launch your new thang
+
+`$ docker run -it -d -p 8081:80 username/mybolt:latest`
+
+
+
+
+
+
+
+About Bolt
 ====
 
 Sophisticated, lightweight & simple CMS. Homepage: [Bolt.cm](https://bolt.cm)
