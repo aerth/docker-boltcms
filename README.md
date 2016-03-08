@@ -18,9 +18,11 @@ Or you may want to customize and tag your own image.
 
 ## Hack
 
-`$ docker exec -it mybolt bash`
-`bash-4.3# apk update && apk add nano vim`
-`exit`
+```
+$ docker exec -it mybolt bash
+bash-4.3# apk update && apk add nano vim
+exit
+```
 
 ## Save Changes
 
