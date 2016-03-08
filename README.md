@@ -1,32 +1,25 @@
-![](screenshot.png?raw=true "Bolt CMS")
+![](https://raw.githubusercontent.com/aerth/docker-boltcms/master/screenshot.png?raw=true "Bolt CMS")
 
 ## Run it
 
-`docker run -it -d --name mybolt -p 8080:80 aerth/boltcms:latest`
+```
+docker pull aerth/boltcms:latest
+docker run -it -d --name mybolt -p 8080:80 aerth/boltcms:latest
 
-####################
+```
 
-Or you may want to customize and tag your own image.
-
-## Build
-
-`docker build -t username/mybolt .`
-
-## Serve
-
-`docker run -it -d --name hello -p 8080:80 username/mybolt:latest`
-
-## Hack
+## Hack it
 
 ```
 $ docker exec -it mybolt bash
 bash-4.3# apk update && apk add nano vim
-exit
+bash-4.3# cd /var/www && ls
+bash-4.3# exit
 ```
 
 ## Save Changes
 
-`$ docker commit hello username/mybolt:latest`
+`$ docker commit mybolt username/mybolt:latest`
 
 ## Launch your new thang
 
